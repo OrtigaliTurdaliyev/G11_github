@@ -41,9 +41,9 @@ public class ProductsDao {
 
     public void editProducts(Products product)  {
         try {
-            String sql = "UPDATE public.product\n" +
-                    "SET full_name = '" + product.getName() + "'\n," +
-                    " password = '" + product.getPrice() + "'\n" +
+            String sql = "UPDATE public.products\n" +
+                    "SET name = '" + product.getName() + "'\n," +
+                    " price = '" + product.getPrice() + "'\n" +
                     "WHERE id = " + product.getId();
 
             jdbcTemplate.update(sql);
@@ -56,7 +56,7 @@ public class ProductsDao {
     public void deleteProducts(Integer id) throws IllegalAccessException {
         try {
             String sql = "DELETE\n" +
-                    "FROM public.products\n" +
+                    "FROM public.products \n" +
                     "WHERE id = " + id;
             jdbcTemplate.update(sql);
         } catch (Exception e) {

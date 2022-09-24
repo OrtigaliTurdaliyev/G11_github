@@ -10,7 +10,7 @@ create table users
 alter table users
     owner to postgres;
 
-create table product
+create table products
 (
     id    bigserial
         constraint product_pk
@@ -19,7 +19,7 @@ create table product
     price double precision
 );
 
-alter table product
+alter table products
     owner to postgres;
 
 create table users_product
