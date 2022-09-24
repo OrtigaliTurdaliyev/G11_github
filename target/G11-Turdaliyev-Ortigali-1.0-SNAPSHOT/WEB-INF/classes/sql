@@ -1,0 +1,36 @@
+create table users
+(
+    id        bigserial
+        constraint users_pk
+            primary key,
+    full_name varchar,
+    password  varchar
+);
+
+alter table users
+    owner to postgres;
+
+create table product
+(
+    id    bigserial
+        constraint product_pk
+            primary key,
+    name  varchar,
+    price double precision
+);
+
+alter table product
+    owner to postgres;
+
+create table users_product
+(
+    id          bigserial
+        constraint users_product_pk
+            primary key,
+    users_id    integer,
+    products_id integer
+);
+
+alter table users_product
+    owner to postgres;
+

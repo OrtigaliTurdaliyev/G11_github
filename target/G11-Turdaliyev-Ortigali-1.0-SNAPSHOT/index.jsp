@@ -7,5 +7,6 @@
 <body>
 <h1> userslar </h1>
 <a href="/users">users</a>
+<a href="/products">products</a>
 </body>
 </html>

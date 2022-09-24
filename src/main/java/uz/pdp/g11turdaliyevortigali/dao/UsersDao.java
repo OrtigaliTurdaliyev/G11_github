@@ -27,7 +27,7 @@ public class UsersDao {
         );
     }
 
-    public Object addNewUsers(Users users) throws IllegalAccessException {
+    public void addNewUsers(Users users) throws IllegalAccessException {
         try {
             String sql = "INSERT INTO public.users (id, full_name, password)\n" +
                     "VALUES (DEFAULT, '" + users.getFullName() + "', '" + users.getPassword() + "');";
@@ -37,7 +37,7 @@ public class UsersDao {
         } catch (Exception e) {
             throw new IllegalAccessException("Xatolik yuz berdi....");
         }
-        return null;
+
     }
 
     public void editUsers(Users users)  {
